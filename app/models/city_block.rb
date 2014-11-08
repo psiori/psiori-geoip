@@ -1,5 +1,5 @@
 require 'geo_ip'
-require 'CSV'
+require 'csv'
 
 class CityBlock < ActiveRecord::Base
   
