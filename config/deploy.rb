@@ -70,7 +70,7 @@ namespace :deploy do
   end
   
   task :update_db do
-    on roles(:app), in: :sequence, wait: 5 do
+    on roles(:db), in: :sequence do
       within release_path + "script/freegeoip_db" do
         execute :bundle, "exec ./updatedb.rb"
       end
