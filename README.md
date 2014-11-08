@@ -75,7 +75,7 @@ The service will answer with a JSON hash of the form
   }
 ```
 
-There's a running instance 
+There's a running instance at https://geoip.psiori.com .
 
 
 Contributors
