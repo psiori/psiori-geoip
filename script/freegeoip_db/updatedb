@@ -85,7 +85,7 @@ def import_csv(cursor, csvfile, table, skip_lines=0):
 
     fd.close()
     print "%d records!" % n
-    #os.unlink(csvfile)
+    os.unlink(csvfile)
 
 
 class world_regions(dict):
@@ -107,8 +107,8 @@ class world_regions(dict):
                 if k != v:
                     self[k] = v[1]
             fd.close()
-            #if autorm is True:
-            #    os.unlink(filename)
+            if autorm is True:
+                os.unlink(filename)
 
     def strip_accents(self, s):
         return ''.join((c for c in unicodedata.normalize('NFD', s)
@@ -139,7 +139,7 @@ if __name__ == "__main__":
         zipfd = zipfile.ZipFile(wr_zip)
         extract(zipfd, wr_csv, wr_csv)
         zipfd.close()
-        #os.unlink(wr_zip)
+        os.unlink(wr_zip)
 
     geolite = "http://geolite.maxmind.com/download/geoip/database/"
 
@@ -159,7 +159,7 @@ if __name__ == "__main__":
             if n in city_files and not os.path.exists(n):
                 extract(zipfd, filename, n)
         zipfd.close()
-        #os.unlink(city_zip)
+        os.unlink(city_zip)
 
     # Fetch the country database
     country_url = geolite + "GeoIPCountryCSV.zip"
@@ -172,7 +172,7 @@ if __name__ == "__main__":
         zipfd = zipfile.ZipFile(country_zip)
         extract(zipfd, country_csv)
         zipfd.close()
-        #os.unlink(country_zip)
+        os.unlink(country_zip)
 
     # Create the IP database
     tmpdb = "_" + dbname + ".temp"
