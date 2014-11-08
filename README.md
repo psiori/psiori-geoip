@@ -28,7 +28,7 @@ There are further commands to start|stop|restart the service:
 Please note that this service uses memcached to cache IP requests. Thus, memcached needs
 to be up and running. If it's not available, simply remove the line
 ```
-config.cache_store = :mem_cache_store
+  config.cache_store = :mem_cache_store
 ```
 from config/environments/production.rb
 
