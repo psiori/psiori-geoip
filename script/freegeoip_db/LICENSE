@@ -1,0 +1,48 @@
+-------------------- License Terms for updatedb -----------------------
+
+Copyright (c) 2013 Alexandre Fiori. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * The names of authors or contributors may NOT be used to endorse or
+promote products derived from this software without specific prior
+written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+--------------------- Database License ----------------------------
+
+Please note, the above license is for the source code only.
+This project DOES NOT include a license to the IP 
+resolution database. We do NOT distribute the data with this 
+project. Instead, updatedb will pull several data-files from
+different 3rd parties. Special license terms to these data-files
+DO apply. Please check the 3rd parties websites for the exact
+terms and to find out, whether or not you're allowed to use
+the data files for your purpose. You may need to apply for neccessary
+licenses on your own. 
+
+The main data is MaxMind's (http://www.maxmind.com) GeoLite database
+that may be used for free for some purposes under the condition,
+that you attribute the origin (at least, at present, Nov 2014). 
+See http://dev.maxmind.com/geoip/geoip2/geolite2/ for the details.

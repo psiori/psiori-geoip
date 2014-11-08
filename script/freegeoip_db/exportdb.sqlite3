@@ -1,0 +1,10 @@
+.mode csv
+.header ON
+.output region_names_out.csv
+SELECT * FROM region_names;
+.output city_blocks_out.csv
+SELECT * FROM city_blocks;
+.output city_location_out.csv
+SELECT * FROM city_location;
+.output country_blocks_out.csv
+SELECT * FROM country_blocks;
