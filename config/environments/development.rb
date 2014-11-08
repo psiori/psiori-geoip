@@ -11,6 +11,7 @@ Rails.application.configure do
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
+  config.cache_store = :mem_cache_store
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
@@ -34,4 +35,6 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  config.session_store = :nil_session_store
 end

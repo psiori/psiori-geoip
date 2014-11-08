@@ -1,0 +1,49 @@
+<section class="head-image">
+  <%= image_tag "psiori.png", class: 'logo'%>
+</section>
+  
+<section id="content">
+
+  <h1>Geolocation From IP @PSIORI</h1>
+
+  <p><%= @host %> provides a simple to use REST API for searching geolocation of IP addresses.</p>
+
+  <p>Internally, this service uses databases of 
+     <a href="http://www.maxmind.com">MaxMind</a> and the service <a href="http://freegeoip.net">freegeoip</a>. 
+     This service is programmed in Ruby on Rails. The software has been open sourced
+     and is available from github: <a href="https://github.com/wackadoo/psiori-geoip">https://github.com/wackadoo/psiori-geoip</a>.</p>
+
+  <h2>Usage</h2>
+
+  <p>Send HTTP GET requests to: <%= @host %>/api/v01/{ipv4}. The API will answer with a JSON hash.</p>
+
+  <p>Test the API by resolving your own ip: 
+     <%= link_to "#{@host}#{api_ip_path(@remote_ip, :version => 'v01')}", 
+                 api_ip_path(@remote_ip, :version => 'v01') %>. It's that simple!</p>
+               
+               
+  <h2>Disclaimer</h2>
+
+  <p>The service is provided as is. We don't guarantee the availability nor the correctness
+     of the provided data. We reserve the right to change or terminate the service at any
+     time without prior notice.</p>
+   
+  <p>We may or may not provide a number of free requests per day. If you need reliable 
+     requests in larger volumes, please contact us to obtain a commercial license.</p>
+
+</section>
+
+
+<footer>
+
+<p class="impressum">
+  <b>5d lab GmbH</b><br/><br/>
+  Schnewlinstr. 10<br/>
+  D-79098 Freiburg<br/><br/>
+  E: <a href="mailto:info@5dlab.com">info@5dlab.com</a><br/>
+  I: <a href="http://www.5dlab.com">www.5dlab.com</a>
+</p>
+
+<p class="reference">This product includes GeoLite data created by MaxMind, available from <a href="http://www.maxmind.com">http://www.maxmind.com</a>.</p>
+
+</footer>

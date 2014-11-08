@@ -1,6 +1,7 @@
 require 'geo_ip'
 
 class Api::IpController < ApplicationController
+  caches_action :show
   
   def show
     @ipv4 = params[:id].to_s
