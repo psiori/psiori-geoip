@@ -14,9 +14,9 @@
 ActiveRecord::Schema.define(version: 20141108115040) do
 
   create_table "city_blocks", force: true do |t|
-    t.integer  "ip_start",   null: false
-    t.integer  "ip_end",     null: false
-    t.integer  "loc_id",     null: false
+    t.integer  "ip_start",   limit: 8, null: false
+    t.integer  "ip_end",     limit: 8, null: false
+    t.integer  "loc_id",               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
