@@ -72,11 +72,13 @@ namespace :deploy do
   task :update_db do
     on roles(:db), in: :sequence do
       within release_path + "script/freegeoip_db" do
-        execute :bundle, "exec ./updatedb.rb"
+        with rails_env: fetch(:rails_env) do
+          execute :bundle, "exec ./updatedb.rb"
+        end
       end
     end
   end
-
+  
   after :publishing, :restart
 
   after :restart, :clear_cache do
