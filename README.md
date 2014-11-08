@@ -24,6 +24,14 @@ There are further commands to start|stop|restart the service:
   bundle exec cap production deploy:stop
   bundle exec cap production deploy:restart
 ```
+
+Please note that this service uses memcached to cache IP requests. Thus, memcached needs
+to be up and running. If it's not available, simply remove the line
+```
+config.cache_store = :mem_cache_store
+```
+from config/environments/production.rb
+
   
 Database
 --------
@@ -43,3 +51,34 @@ This command will take several minutes to complete. During the update, the geo r
 will not work properly (should be changed later).
 
 MaxMind presently updates their data on the 1st of every month.
+
+
+Usage
+-----
+
+You use the service by sending simple HTTP GET requests to a single endpoint:
+
+```
+  GET /api/v01/ip/{ipv4}
+```
+
+Just fill in the IPv4 address that should be resolved at the end of the URL. 
+
+The service will answer with a JSON hash of the form
+```
+  {
+    "ip"           : "87.176.174.189",
+    "country_code" : "DE",
+    "city"         : "Freiburg",
+    "latitude"     : "48.0",
+    "longitude"    : "7.85"
+  }
+```
+
+There's a running instance 
+
+
+Contributors
+------------
+
+Sascha Lange - sascha@5dlab.com
