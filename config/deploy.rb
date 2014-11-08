@@ -50,7 +50,8 @@ namespace :deploy do
       end
     end
   end
-    
+
+  desc 'Start application'    
   task :start do
     on roles(:app), in: :sequence, wait: 5 do
       within release_path do
@@ -59,10 +60,19 @@ namespace :deploy do
     end
   end
   
+  desc 'Stop application'
   task :stop do
     on roles(:app), in: :sequence, wait: 5 do
       within release_path do
         execute :bundle, "exec thin -C config/thin_server.yml stop"
+      end
+    end
+  end
+  
+  task :update_db do
+    on roles(:app), in: :sequence, wait: 5 do
+      within release_path + "script/freegeoip_db" do
+        execute :bundle, "exec ./update.rb"
       end
     end
   end
