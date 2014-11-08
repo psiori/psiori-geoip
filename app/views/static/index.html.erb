@@ -15,7 +15,7 @@
 
   <h2>Usage</h2>
 
-  <p>Send HTTP GET requests to: <%= @host %>/api/v01/{ipv4}. The API will answer with a JSON hash.</p>
+  <p>Send HTTP GET requests to: <%= @host %>/api/v01/ip/{ipv4}. The API will answer with a JSON hash.</p>
 
   <p>Test the API by resolving your own ip: 
      <%= link_to "#{@host}#{api_ip_path(@remote_ip, :version => 'v01')}", 
