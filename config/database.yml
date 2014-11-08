@@ -26,3 +26,4 @@ production:
   database: geoip
   port: 5432
   username: run-gp
+  password: 'IpUser1#'
