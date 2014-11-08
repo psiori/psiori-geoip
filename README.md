@@ -13,15 +13,17 @@ Deployment
 This package can be easily deployed to geoip.psiori.com using the following capistrano
 command:
 
+```
   bundle exec cap production deploy
-
+```
 
 There are further commands to start|stop|restart the service:
 
+```
   bundle exec cap production deploy:start
   bundle exec cap production deploy:stop
   bundle exec cap production deploy:restart
-
+```
   
 Database
 --------
@@ -33,7 +35,9 @@ same directory.
 
 You can update the database on the production server using a capistrano task:
 
+```
   bundle exec cap production deploy:update_db
+```
   
 This command will take several minutes to complete. During the update, the geo resolution
 will not work properly (should be changed later).
