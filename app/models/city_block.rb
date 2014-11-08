@@ -2,6 +2,8 @@ require 'geo_ip'
 require 'CSV'
 
 class CityBlock < ActiveRecord::Base
+  
+  belongs_to :city_location, :foreign_key => :loc_id, :inverse_of => :city_blocks
 
   scope :by_ip, lambda { |ip| where(['ip_start <= ? AND ip_end >= ?', GeoIp.ip2int(ip), GeoIp.ip2int(ip)]) }
   
