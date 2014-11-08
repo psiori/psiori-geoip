@@ -6,7 +6,7 @@ one:
   city_name: MyString
   postal_code: MyString
   latitude: 9.99
-  logitude: 9.99
+  longitude: 9.99
   metro_code: MyString
   area_code: MyString
 
@@ -16,6 +16,6 @@ two:
   city_name: MyString
   postal_code: MyString
   latitude: 9.99
-  logitude: 9.99
+  longitude: 9.99
   metro_code: MyString
   area_code: MyString
