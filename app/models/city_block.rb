@@ -23,7 +23,7 @@ class CityBlock < ActiveRecord::Base
   # also endds before the query with ip_end ALSO smaller than query),
   # we have a fallback query in find_by_ip that makes sure we'll 
   # always return the corret answer.
-  scope :by_ip_fast, lambda { |ip| where(['ip_start <= ?', GeoIp.ip2int(ip).order(ip_start: :desc)]) }
+  scope :by_ip_fast, lambda { |ip| where(['ip_start <= ?', GeoIp.ip2int(ip)]).order(ip_start: :desc) }
   scope :by_ip,      lambda { |ip| where(['ip_start <= ? AND ip_end >= ?', GeoIp.ip2int(ip), GeoIp.ip2int(ip)]) }
   
   def self.find_by_ip(ip)
