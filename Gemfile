@@ -34,6 +34,7 @@ gem 'dalli'
 gem 'pg',  group: :production
 gem 'thin'
 gem 'rails-perftest'
+gem 'ruby-prof'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ip_start: 1
-  ip_end: 1
+  ip_start: 0
+  ip_end: 2000000
   loc_id: 1
 
 two:
-  ip_start: 1
-  ip_end: 1
+  ip_start: 2000001
+  ip_end: 999999999
   loc_id: 2
