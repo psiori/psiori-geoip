@@ -29,7 +29,7 @@ class CityBlock < ActiveRecord::Base
   def self.find_by_ip(ip)
     ipint = GeoIp.ip2int(ip)
     cb = CityBlock.by_ip_fast(ip).first
-    if !cb.nil? && cb.ip_start <= GeoIp.ip2int(ipint) && cb.ip_end >= GeoIp.ip2int(ipint)
+    if !cb.nil? && cb.ip_start <= ipint && cb.ip_end >= ipint
       cb
     else # fallback for the case where the data is inconsistent, e.g. does contain a hole
       logger.error "Fast ip lookup failed for ip: #{ip}."
