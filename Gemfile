@@ -33,6 +33,7 @@ gem 'actionpack-action_caching'
 gem 'dalli'
 gem 'pg',  group: :production
 gem 'thin'
+gem 'rails-perftest'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
