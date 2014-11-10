@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141110171234) do
+ActiveRecord::Schema.define(version: 20141110180442) do
 
   create_table "city_blocks", force: true do |t|
     t.integer  "ip_start",   limit: 8, null: false
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20141110171234) do
   end
 
   add_index "city_blocks", ["ip_end"], name: "index_city_blocks_on_ip_end", unique: true
+  add_index "city_blocks", ["ip_start", "ip_end", "id"], name: "index_city_blocks_on_ip_start_and_ip_end_and_id", unique: true
   add_index "city_blocks", ["ip_start", "ip_end"], name: "index_city_blocks_on_ip_start_and_ip_end", unique: true
   add_index "city_blocks", ["ip_start"], name: "index_city_blocks_on_ip_start", unique: true
 
