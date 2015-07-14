@@ -4,9 +4,9 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :app, %w{deploy-gp@geoip.psiori.com}
-role :web, %w{deploy-gp@geoip.psiori.com}
-role :db,  %w{deploy-gp@geoip.psiori.com}
+#role :app, %w{deploy-gp@geoip.psiori.com}
+#role :web, %w{deploy-gp@geoip.psiori.com}
+#role :db,  %w{deploy-gp@geoip.psiori.com}
 
 
 # Extended Server Syntax
@@ -15,7 +15,8 @@ role :db,  %w{deploy-gp@geoip.psiori.com}
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server 'geoip.psiori.com', user: 'deploy-gp', roles: %w{web app}, my_property: :my_value
+# server 'geoip.psiori.com', user: 'deploy-gp', roles: %w{web app}, my_property: :my_value
+server '148.251.42.240', user: 'deploy-gp', roles: %w{web app db}
 
 
 # Custom SSH Options
