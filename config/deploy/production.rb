@@ -15,8 +15,7 @@
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-# server 'geoip.psiori.com', user: 'deploy-gp', roles: %w{web app}, my_property: :my_value
-server '148.251.42.240', user: 'deploy-gp', roles: %w{web app db}
+server 'geoip.psiori.com', user: 'deploy-gp', roles: %w{web app db} #, my_property: :my_value
 
 
 # Custom SSH Options
